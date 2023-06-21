@@ -37,7 +37,7 @@ const active = ref(false);
         </div>
         <div class="flex justify-end">
           <AppButton class="secondary mr-2" @click="cartStore.$reset()">Clear Cart</AppButton>
-          <AppButton class="primary">Checkout</AppButton>
+          <AppButton class="primary" @click="cartStore.checkout">Checkout</AppButton>
         </div>
       </div>
 
