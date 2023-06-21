@@ -4,7 +4,11 @@ defineProps({
 });
 
 const emit = defineEmits(["update:modelValue", "input"]);
-const updateValue = (value) => emit("update:modelValue", value);
+const updateValue = (value) => {
+  if(value !== ""){
+    emit("update:modelValue", value);
+  }
+}
 </script>
 <template>
   <span>
