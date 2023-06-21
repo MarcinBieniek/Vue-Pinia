@@ -6,9 +6,12 @@ import CartItem from "./CartItem.vue";
 import { useCartStore } from "../stores/CartStore";
 const cartStore = useCartStore()
 
+console.log('test', cartStore.grouped)
+
 // data
 const active = ref(false);
 </script>
+
 <template>
   <div class="relative">
     <!-- Icon that always shows -->
@@ -24,16 +27,16 @@ const active = ref(false);
             v-for="(items, name) in cartStore.grouped"
             key="name"
             :product="items[0]"
-            :count="items.length"
+            :count="cartStore.groupCount(name)"
             @updateCount=""
-            @clear=""
+            @clear="cartStore.clearItem(name)"
           />
         </ul>
         <div class="flex justify-end text-2xl mb-5">
-          Total: <strong>$40</strong>
+          Total: <strong>${{ cartStore.total }}</strong>
         </div>
         <div class="flex justify-end">
-          <AppButton class="secondary mr-2">Clear Cart</AppButton>
+          <AppButton class="secondary mr-2" @click="cartStore.$reset()">Clear Cart</AppButton>
           <AppButton class="primary">Checkout</AppButton>
         </div>
       </div>
