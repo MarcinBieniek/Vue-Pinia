@@ -1,16 +1,28 @@
-# Pinia, The Enjoyable Vue Store 
-## Boilerplate Code
+## Description
 
-![Course Feature Image](https://vueschool.io/media/bc6229f7525d1df7f87bd22604eaa468/Pinia_not-transparent.png)
+A simple store with add products to the cart and place an order options. The goal of the project was to test the capabilities of Vue 3 and Pinia. Styling was done using Tailwind.
 
-## How to Use
+## Demo
 
-```
-npx degit  vueschool/pinia-course-boilerplate 
-```
-```
-npm install
-npm run dev
+Live demo: [https://jovial-centaur-df632a.netlify.app/](https://jovial-centaur-df632a.netlify.app/)
+
+Thank you for taking your time and checking out my project.
+
+## Running the app
+
+```bash
+# development
+$ vite
+
+# build
+$ vite build
+
+# serve
+$ vite preview
 ```
 
-[Checkout the course!](https://vueschool.io/courses/pinia-the-enjoyable-vue-store)
+## Stay in touch
+
+Author - [Marcin Bieniek](https://www.linkedin.com/in/marcin-bieniek-617565271/)
+
+Portfolio - [marcindev.netlify.app](https://marcindev.netlify.app/)
