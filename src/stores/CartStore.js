@@ -2,7 +2,6 @@ import { defineStore } from "pinia";
 import { groupBy } from "lodash";
 import { useAuthUserStore } from "./AuthUserStore";
 
-
 export const useCartStore = defineStore("CartStore", {
 
   state: () => {
